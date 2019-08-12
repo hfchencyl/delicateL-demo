@@ -23,7 +23,7 @@ RUN bash -c 'touch /test/test.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/test/test.jar"]
 
 # port
-EXPOSE 8090
+EXPOSE 8080
 
 # 挂载配置数据到宿主机,宿主机挂载路径自动生成,一般可在主机/var/lib/docker/volumes/ 中查找
 VOLUME ["/tmp"]
