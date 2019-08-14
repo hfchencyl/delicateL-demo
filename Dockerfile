@@ -14,13 +14,13 @@ FROM java:8
 MAINTAINER cold
 
 #添加代码
-ADD test.jar /test/test.jar
+ADD target/delicate-demo.jar /delicatel/delicate-demo.jar
 
 #RUN
-RUN bash -c 'touch /test/test.jar'
+RUN bash -c 'touch /delicatel/delicate-demo.jar'
 
 #ENTRYPOINT
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/test/test.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/delicatel/delicate-demo.jar"]
 
 # port
 EXPOSE 8080
